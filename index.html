@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="othello.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>どうぶつオセロ</title>
+</head>
+<body>
+    <div class="result displayNone">
+        <div class="finish">
+            <h1 class="winner">勝者</h1>
+            <div class="finishBtns">
+                <button class="left" id="finish">おわる</button>
+                <button class="right" id="again">もういちど</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1><i class="fas fa-paw"></i>どうぶつオセロ</h1>
+    </header> 
+    <div class="floatLeft leftSide"></div>
+    <div class="content floatLeft">   
+        <h1 class="turn">あなたのターンです</h1>  
+        <div class="diagram vertical">
+            <ul>
+                <li><p data-koji="0"></p></li>
+                <li><p data-koji="1"></p></li>
+                <li><p data-koji="2"></p></li>
+                <li><p data-koji="3"></p></li>
+                <li><p data-koji="4"></p></li>
+                <li><p data-koji="5" class="black"></p></li>
+                <li><p data-koji="6" class="white"></p></li>
+                <li><p data-koji="7"></p></li>
+                <li><p data-koji="8"></p></li>
+                <li><p data-koji="9" class="white"></p></li>
+                <li><p data-koji="10" class="black"></p></li>
+                <li><p data-koji="11"></p></li>
+                <li><p data-koji="12"></p></li>
+                <li><p data-koji="13"></p></li>
+                <li><p data-koji="14"></p></li>
+                <li><p data-koji="15"></p></li>
+                <div style="clear: both;"></div>
+            </ul>
+        </div>
+        <div class="points">
+            <div class="point">
+                <h1>あなた</h1>
+                <div class="pointContent you">
+                    <img src="pictures/kitune.png" alt="" id="you">
+                    <div class="characterColor1"></div>
+                </div>
+                <!-- <h2 id="point1"> 2</h2> -->
+            </div>
+        
+            <div class="point topMargin">
+               <h1>てき</h1>
+               <div class="pointContent enemy">
+                   <img src="pictures/kaba.png" alt="">
+                   <div class="characterColor2"></div>
+               </div>
+               <!-- <h2 id="point2">2</h2> -->
+            </div>
+        </div>
+
+        <div class="bottomBtns">
+            <div class="pass">
+                <button>パス</button>
+            </div>
+            <div class="restart">
+                <button>最初から</button>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="floatLeft rightSide">
+        <div class="characters">
+            <div class="charactersHeader">キャラクター</div>
+            <div class="animalImages">
+                <img src="pictures/kitune.png" alt="">
+                <img src="pictures/kaba.png" alt="">
+                <img src="pictures/azarashi.png" alt="">
+                <img src="pictures/tanuki.png" alt="">
+                <img src="pictures/hitsuzi.png" alt="">
+                <img src="pictures/buta.png" alt="">
+                <img src="pictures/saru.png" alt="">
+                <img src="pictures/sirokuma.png" alt="">
+                <img src="pictures/pannda.png" alt="">
+                <img src="pictures/neko.png" alt="">
+                <img src="pictures/ushi.png" alt="">
+                <img src="pictures/ookami.png" alt="">
+            </div>
+            <div class="setsumei">
+                <h1><i class="fas fa-paw"></i>どうぶつオセロ</h1>
+                <h2>・遊び方</h2>
+                <h2>・キャラクター</h2>
+                <h2>・説明</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button class="kuro yourTurn">black</button>
+        <button class="siro">white</button>
+    </div>
+    <script src="othello.js"></script>
+</body>
+</html>
